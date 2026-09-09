@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Chatroom</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="chat">
+    <header class="header">
+      <div>
+        <h1>💬 My Chatroom</h1>
+        <p><span class="dot"></span><span id="status">Connecting...</span></p>
+      </div>
+      <div class="online">
+        👥 <span id="userCount">0</span>
+      </div>
+    </header>
+
+    <section id="messages" class="messages" aria-live="polite"></section>
+
+    <div class="typing" id="typing"></div>
+
+    <form id="messageForm" class="input-area">
+      <input
+        id="messageInput"
+        maxlength="500"
+        placeholder="Type a message..."
+        autocomplete="off"
+        disabled
+      >
+      <button id="sendButton" type="submit" disabled>Send</button>
+    </form>
+  </main>
+
+  <script src="client.js"></script>
+</body>
+</html>
